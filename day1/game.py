@@ -57,3 +57,23 @@ class Game:
                 line.append(val if val else ".")
             print(" ".join(line))
         print()
+
+    def main(self):
+        while self.winner is None and not self.is_tie():
+            self.print_board()
+            current_player = self._players[self._current_player_index]
+            move = input(f"{current_player}'s turn: ")
+            move = move.strip()
+            if move.startswith("(") and move.endswith(")"):
+                move = move[1:-1]
+            try:
+                i_str, j_str = move.split(",")
+                i, j = int(i_str.strip()), int(j_str.strip())
+                self.play(i, j)
+            except (ValueError, InvalidMoveError) as e:
+                print(f"Invalid move: {e}")
+        self.print_board()
+        if self.winner:
+            print(f"{self.winner} wins!")
+        else:
+            print("It's a tie!")

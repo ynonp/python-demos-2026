@@ -1,3 +1,4 @@
-import cowsay
+from game import Game
 
-cowsay.cow("hello world")
+game = Game("X", "O")
+game.main()
