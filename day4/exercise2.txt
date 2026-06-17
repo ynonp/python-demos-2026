@@ -1,0 +1,12 @@
+Update the TCP Server example
+Add a timeout so if a user doesn't send text in 8 seconds they are disconnected. Implement 2 solutions:
+First use task cancel
+Then read about asyncio.wait_for and use it with a timeout value
+
+
+Write a web downloader that takes a list of URLs and downloads the files
+First version download serially using httpx.Client
+Second version download in parallel using httpx.AsyncClient
+Compare download times for different lists
+
+ 
