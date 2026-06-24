@@ -1,0 +1,3 @@
+Find singletons in-
+Python's unittest mock module https://github.com/python/cpython/blob/main/Lib/unittest/mock.py
+loguru https://github.com/Delgan/loguru/tree/master
